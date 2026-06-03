@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- <script src="data.js"></script>
+    <script src="Cart.js"></script> -->
+</head>
+<body>
+    <div class="navbar">
+        <a href="InitailView/index.html" class="left">Home</a>
+
+        <div class="search">
+            <input type="text" id="searchInput"placeholder="Search...">
+            <button type="submit" id="searchButton">Search</button>
+        </div>
+        
+        <!-- cart page ma ja ja ja  -->
+        <!-- <a href="../Cart.html" >
+            <div class="cart"> -->
+                <div id="quantity">0</div>
+            </div>
+        </a>
+    </div>
+    <!-- Navbar chahinxa hai yesma pani -->
+
+    <div id="shop"></div>
+
+    <h1>Welcome to Cart Page</h1>
+
+    <!-- Aba items dekhaunu parxa -->
+
+    <div class="cart_page"></div>
+    <div class="shopping_cart" id="shopping_cart"></div>
+    <div class="label" id="label"></div>
+
+
+
+    <script src="settinglocalstorage.js"></script>
+    <script src="cart.js"></script>
+    <script src="searching.js"></script>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchButton = document.getElementById('searchButton');
+            const searchInput = document.getElementById('searchInput');
+            
+            searchButton.addEventListener('click', function() {
+                search();
+            });
+
+            searchInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    search();
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

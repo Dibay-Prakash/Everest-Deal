@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying Parsed JSON Data</title>
+    <script src="data.js" defer></script>
+</head>
+<body>
+    <!-- Your HTML content here -->
+    <div id="jsonDisplay">
+        <!-- JSON data will be displayed here -->
+    </div>
+    
+    <script>
+        fetch('http://localhost/EverestDeal/data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text(); // Read the response as text
+            })
+            .then(textData => {
+                console.log('Text data received:', textData); // Log the text data received from the server
+
+                // Attempt to parse the text as JSON
+                try {
+                    const jsonData = JSON.parse(textData);
+                    console.log('JSON data:', jsonData); // Log the parsed JSON data
+                    window.jsonData = jsonData; // Pass jsonData to data.js
+
+                    // Display JSON data on the page
+                    displayJsonData(jsonData);
+                } catch (error) {
+                    console.error('Error parsing JSON:', error);
+                }
+            })
+            
+
+        // Function to display JSON data on the page
+        function displayJsonData(jsonData) {
+            const jsonDisplay = document.getElementById('jsonDisplay');
+            jsonDisplay.innerHTML = '<pre>' + JSON.stringify(jsonData, null, 2) + '</pre>';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: 0;
+}
+
+body
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.content
+ {
+    padding: 20px;
+    text-align: center;
+    background-color: grey; 
+    /* margin-bottom: 15px; */
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    
+}
+
+.navbar
+{
+    background: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 50px;
+    position: sticky;
+    /* navbar is sliding above content kinaki content is fixed while position is sticky */
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    
+    
+
+
+
+}
+.navbar a
+{
+    color: black;
+    padding: 10px;
+
+}
+.search
+{
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+}
+.search input[type="text"]
+ {
+    padding: 5px;
+    margin-right: 10px;
+}
+.search button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#shopping_cart {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.cart_item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cart_item_img {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cart_item_img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#label {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Checkout_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.Checkout_area h2 {
+    margin: 0;
+}
+
+.update {
+    background-color: #28a745;
+}
+
+.Checkout {
+    background-color: #dc3545;
+}
